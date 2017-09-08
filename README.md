@@ -1,4 +1,4 @@
-# boilerPlate-coffee-nodeModule
+# moduleTest
 
 nodejsのmoduleテスト集です。
 
@@ -9,3 +9,7 @@ nodejsのmoduleテスト集です。
 https://github.com/mick-whats/moduleTest/blob/master/coffee/test/momentTest.coffee
 
 [Moment\.js \| Docs(公式)](http://momentjs.com/docs/)
+
+## githubメモ
+
+https://github.com/mick-whats/moduleTest/blob/master/github_memo.md
