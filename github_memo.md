@@ -17,8 +17,8 @@ Host github-mick
   User git
 ```
 
-`./ssh/config`の内容が上記だとしたら、Hostに書いてある`github-mick`を覚えておく
-`https://github.com/`の部分を`git@github-mick:`に変更する
+1. `./ssh/config`の内容が上記だとしたら、Hostに書いてある`github-mick`を覚えておく
+2. `https://github.com/`の部分を`git@github-mick:`に変更する
 
 ```
 # 例
