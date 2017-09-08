@@ -45,3 +45,10 @@ Host github-mick
 # ↓
 # git@github-mick:mick-whats/rrq.git
 ```
+
+
+## リポジトリ名の変更
+
+- githubで[settings]から[Repository name]のボックスを変更して[rename]を押す。
+- localで`.git/config`内のremote urlを変更する
+- ディレクトリ名などを変更する
