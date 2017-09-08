@@ -1,15 +1,22 @@
-# moduleTest
+# selfmemo
 
+自分用メモです。
+
+## testディレクトリ
 nodejsのmoduleテスト集です。
 
 ドキュメント代わりに作りました。
+主にcoffee scriptで記述しています。
 
-## moment
+### moment
 
-https://github.com/mick-whats/moduleTest/blob/master/coffee/test/momentTest.coffee
+[selfmemo/momentTest\.coffee](https://github.com/mick-whats/selfmemo/blob/master/coffee/test/momentTest.coffee)
 
 [Moment\.js \| Docs(公式)](http://momentjs.com/docs/)
 
+## memoディレクトリ
+その他メモです。
+
 ## githubメモ
 
-https://github.com/mick-whats/moduleTest/blob/master/github_memo.md
+[selfmemo/github\_memo\.md](https://github.com/mick-whats/selfmemo/blob/master/memo/webservice/github_memo.md)
