@@ -19,3 +19,9 @@ master = ブランチ名
 [\[git\]ローカルからpushした時に自動的に追跡ブランチにする \- dackdive's blog](http://dackdive.hateblo.jp/entry/2014/09/10/121945)
 
 [Git で「追跡ブランチ」って言うのやめましょう \- Qiita](http://qiita.com/uasi/items/69368c17c79e99aaddbf)
+
+追跡ブランチの確認は
+```
+git branch -vv
+> * master xxxxxx [origin/master] initial
+```
