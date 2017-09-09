@@ -1,6 +1,12 @@
 # gitメモ
 [Git](https://git-scm.com/)
 
+## 直前のコミットを取り消し
+
+```
+git reset --soft HEAD^
+```
+
 ## push
 
 基本的には以下のようにするべき。
