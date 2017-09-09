@@ -14,6 +14,8 @@ v0.3.0
 $ npm version major
 v1.0.0
 
+その他の使い方
+
 [node\.js \- What is the convention for versioning npm packages prior to 1\.0\.0? \- Stack Overflow](https://stackoverflow.com/questions/28421489/what-is-the-convention-for-versioning-npm-packages-prior-to-1-0-0)
 
 ### outdated
@@ -63,6 +65,8 @@ command|alias
 install | i
 uninstall|remove, rm, r, un, unlink
 list|ls,la,ll
+test|t
+
 
 
 ## other
