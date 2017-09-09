@@ -1,5 +1,11 @@
 # githubメモ
 
+公式
+[GitHub](https://github.com/)
+公式ガイド
+[GitHub Guides](https://guides.github.com/)
+markdownのドキュメント
+[Mastering Markdown · GitHub Guides](https://guides.github.com/features/mastering-markdown/)
 ## hubコマンド
 hubコマンドを使えば色々と捗る。インストールは
 ```

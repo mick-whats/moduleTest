@@ -9,6 +9,7 @@
   },
   "keywords": [],
   "dependencies": {
+    "async": "^2.5.0",
     "lodash": "^4.7.0",
     "moment": "^2.13.0"
   },
