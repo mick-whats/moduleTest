@@ -6,6 +6,12 @@
 [atom\-cheat\-sheet \- Qiita](http://qiita.com/__mick/items/a3d09b677a717385e36b)
 
 
+その他
+
+キー|機能
+:|:
+cmd+.|キーバインドの確認
+
 ## Packages
 
 ### [git\-plus](https://atom.io/packages/git-plus)
