@@ -7,6 +7,32 @@
 git reset --soft HEAD^
 ```
 
+## ディレクトリ構造を変更する
+
+`./memo`以下を`./`に移動する方法。`git mv`を使う
+`git mv ./memo ./ `としたら一括で移動できると思ったができない。
+
+```
+git mv ./memo ./
+# fatal: can not move directory into itself, source=memo, destination=memo
+```
+
+一つづつ指定する必要があるようだ。
+
+```
+git mv ./memo/life ./        
+git mv ./memo/technology ./  
+git mv ./memo/os ./          
+git mv ./memo/tools ./       
+git mv ./memo/webservice/ ./ 
+git rm memo  
+# fatal: pathspec 'memo' did not match any files
+```
+
+gitの設定だけ変わるのかと思ったが実際のファイルもちゃんと移動している。
+memoディレクトリは空になったのでrm(削除)しようと思ったが`fatal: pathspec 'memo' did not match any files`と出る。
+空のディレクトリは削除できないようだ。
+
 ## push
 
 基本的には以下のようにするべき。
