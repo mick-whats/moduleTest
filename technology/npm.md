@@ -23,7 +23,7 @@ v1.0.0
 パッケージが更新されているか調べる
 
 ```sh
-npm outdated                                                                                                                +[master][~/Documents/node/tests/selfmemo]
+npm outdated                                                                                                                +[master][~/Documents/node/tests/selfnote]
 Package  Current  Wanted  Latest  Location
 chai       3.5.0   3.5.0   4.1.2  chai
 ```
