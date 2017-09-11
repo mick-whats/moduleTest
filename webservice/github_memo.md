@@ -55,6 +55,7 @@ Host github-mick
 
 ## リポジトリ名の変更
 
-- githubで[settings]から[Repository name]のボックスを変更して[rename]を押す。
-- localで`.git/config`内のremote urlを変更する
-- ディレクトリ名などを変更する
+1. githubで[settings]から[Repository name]のボックスを変更して[rename]を押す。
+2. localで`.git/config`内のremote urlを変更する
+3. ディレクトリ名(プロジェクト名)を変更する(一個上の階層から`mv [before name] [new name]`)
+4. READMEなどファイル内に書かれているリポジトリ名を変更。(atomならcmd+shift+Fでプロジェクト内を一括検索推奨)
