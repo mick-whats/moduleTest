@@ -17,6 +17,9 @@ describe "moment test", ->
     OK moment('2010-10-20').isBefore('2010-10-21')
     NG moment('2010-10-20').isBefore('2010-10-20')
     NG moment('2010-10-20').isBefore('2010-10-19')
+    NG moment('2010-10-20').isBefore('2010-10-19')
+    OK moment('2017-08-10T06:30:00.000Z').isBefore('2017-08-10T07:30:00.000Z')
+    NG moment('2017-08-10T06:30:00.000Z').isBefore('2017-08-10T07:30:00.000Z','day'),'日付ベースでsameになるのでisBeforeではfalseが返る'
   it "isSameOrBefore", ->
     OK moment('2010-10-20').isSameOrBefore('2010-10-21')
     OK moment('2010-10-20').isSameOrBefore('2010-10-20')
