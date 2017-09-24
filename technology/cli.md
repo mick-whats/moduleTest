@@ -17,3 +17,12 @@ browser-sync start --server --files='sample/*.*'
 URLの欄には`http://localhost:3000/` となっているので`http://localhost:3000/sample/test.html`と作成したhtmlファイルのパスを入力すると表示される。
 
 後は`sample`ディレクトリ内のファイルが更新されるたびに自動でリロードされる。
+
+## curl
+
+-Oオプションでカレントディレクトリにダウンロード
+
+```
+cd download_directory_path
+curl -O https://coincheck.com/api/order_books
+```
