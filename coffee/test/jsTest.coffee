@@ -25,6 +25,10 @@ describe "JavaScript test", ->
     nums2 = [0.06 , 0.09 , 0.08 , 0.12 , 0.12 , 0.2]
     NotEqual sumArray(nums2),0.67
     Equal sumArray(nums2),0.6699999999999999
+  it "Number関数にゼロから始まる文字列を入れてみるテスト", ->
+    Equal Number('0798'),798
+    Equal Number('000798'),798
+
 
   it "arguments", ->
     templates = [
@@ -34,22 +38,21 @@ describe "JavaScript test", ->
     test = ->
       style = {}
       args = Array::slice.call(arguments, 0)
-      attr = args.pop()
-      if !_.isPlainObject(attr)
-        args.push attr
-        attr = null
       nums = []
       strs = []
-      for i in [0..args.length]
-        item = args[i]
+      objs = []
+      args.forEach (item)->
         if _.isNumber(item)
           nums.push(item)
         else if _.isString(item)
           strs.push(item)
+        else if _.isPlainObject(item)
+          objs.push(item)
       style['color'] = color if color = _.get(strs,'0')
       style['background-color'] = bgColor if bgColor = _.get(strs,'1')
       style = if Object.keys(style).length then {style} else {}
       template = if nums.length then templates[nums[0]] else {}
+      attr = if objs.length then objs[0] else {}
       return _.merge(template,attr,style)
     DeepEqual test({width: '100px'}),{ width: '100px' }
 
@@ -64,12 +67,12 @@ describe "JavaScript test", ->
     "第三引数のgoldは無視される"
 
     DeepEqual test('blue',{width: '100px'},'red'),
-    {style: { color: 'blue','background-color': 'red'} },
-    "引数の最後ではないObjectは無視される"
+    { width: '100px',style: { color: 'blue','background-color': 'red'} },
+    "Objectは位置に関係なくattrに変換される"
 
     DeepEqual test({width: '100px'},'red','blue'),
-    {style: { color: 'red','background-color': 'blue'} },
-    "引数の最後ではないObjectは無視される"
+    { width: '100px',style: { color: 'red','background-color': 'blue'} },
+    "Objectは位置に関係なくattrに変換される"
 
     DeepEqual test(0,'red','blue'),
     margin:
@@ -81,7 +84,7 @@ describe "JavaScript test", ->
     margin:
       '100px'
     style: { color: 'red', 'background-color': 'blue' },
-    "引数の最後にObjectがあり、templateと値が被っていれば上書きされる"
+    "Object(attr)はtemplateと値が被っていれば上書きされる"
 
   it "arguments2", ->
     # 関数の引数を別の関数に丸投げする
@@ -101,3 +104,9 @@ describe "JavaScript test", ->
     DeepEqual X(2,'a',{hoge:'fuga'}),C(2,'a',{hoge:'fuga'})
     DeepEqual C(2,'a',{hoge:'fuga'}),correct,
     "X.apply(@,arguments) とすることで、そのままの形で返ってくる"
+
+    D = ->
+      args = Array::slice.call(arguments, 0)
+      args.shift()
+      return X.apply(@,args)
+    DeepEqual D('text',2,'a',{hoge:'fuga'}),X(2,'a',{hoge:'fuga'})
