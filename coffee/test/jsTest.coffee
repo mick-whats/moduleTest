@@ -29,6 +29,9 @@ describe "JavaScript test", ->
     Equal Number('0798'),798
     Equal Number('000798'),798
 
+  it "Number型をカンマ区切りのStringに変更する", ->
+    num = 123456789
+    Equal num.toLocaleString(),"123,456,789"
 
   it "arguments", ->
     templates = [
