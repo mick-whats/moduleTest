@@ -29,3 +29,19 @@ describe "Lodash test", ->
     assert.deepEqual [ 4, 2, 3, 1, undefined ],_.uniq arr.map (o)-> o.a
     # さらに_.compactでラップする
     assert.deepEqual [ 4, 2, 3, 1],_.compact _.uniq arr.map (o)-> o.a
+
+  it "二次元配列のsortをする方法", ->
+    ###
+    sortはorderByを使う(sortByはasc,descを指定できない)
+
+    公式DocumentではObjectが並んだ配列が例に上がっているが、ObjectでなくArrayの場合はどうするのか。
+    Objectではkeyを指定する。Arrayは添字がkeyになるのでそれを使う。それだけ。
+    ###
+    arr = [
+      [5,1]
+      [3,1]
+      [4,1]
+      [2,1]
+      [1,1]
+    ]
+    assert.deepEqual _.orderBy(arr,[0],['asc']), [ [ 1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ] ]
