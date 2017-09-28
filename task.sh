@@ -3,4 +3,4 @@
 echo 'compile'
 coffee -o ./ -c coffee/
 echo `date '+%y/%m/%d %H:%M:%S'`
-mocha --timeout 6000
+mocha --timeout 60000
