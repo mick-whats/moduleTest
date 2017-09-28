@@ -38,3 +38,5 @@ node_modules
 test
 !coffee/test
 draft/
+coffee/secret/
+secret/
