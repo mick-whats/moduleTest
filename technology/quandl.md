@@ -65,7 +65,7 @@ describe "quandl test", ->
      column_index: null,
      start_date: '2007-01-04',
      end_date: '2017-09-28',
-     data: [ [ '2017-09-28', 2422, 2422, 2299, 2343, 43600 ] ],
+     data: [ [ '2017-09-28', 9093, 9162, 9070, 9115, 5663300 ] ],
      collapse: null,
      order: null,
      database_id: 473 } }
